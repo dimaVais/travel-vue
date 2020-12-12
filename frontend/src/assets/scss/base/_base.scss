@@ -1,0 +1,23 @@
+@import '@/assets/scss/setup/variables';
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $clr5;
+}
+input{
+    background-color: $clr2;
+}
+
+.pets-container{
+    min-height: 75vh;
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(5,5,5);
+}

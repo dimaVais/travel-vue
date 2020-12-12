@@ -1,0 +1,52 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+
+    > * {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+            background-color: $clr3;
+        }
+    }
+
+/*     @include for-narrow-layout {
+        grid-template-columns: 
+            minmax(20px, 1fr)
+            minmax(auto, $mobile-breakpoint)
+            minmax(20px, 1fr);
+    }
+    @include for-normal-layout {
+        grid-template-columns: 
+            minmax(20px, 1fr)
+            minmax(auto, $narrow-breakpoint)
+            minmax(20px, 1fr);
+    }
+    @include for-wide-layout {
+        grid-template-columns: 
+            minmax(20px, 1fr)
+            minmax(auto, $normal-breakpoint)
+            minmax(20px, 1fr);
+    } */
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.page{
+    max-width: 1300px;
+    min-width: 1300px;
+    background-color: $clr4;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    &.nav-main{
+        background-color: $clr3;
+    }
+}
+
+

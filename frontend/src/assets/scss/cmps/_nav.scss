@@ -1,0 +1,28 @@
+.nav-box {
+    .nav-main {
+        margin-top: 20px;
+        height: 80px;
+
+        .main-header {
+            font-size: 50px;
+            color: azure;
+            font-family: montserrat;
+        }
+
+        .homebox {
+            width:80px;
+            .home-btn {
+                background: transparent;
+                outline: none;
+                border-width: 0px;
+                font-size: 60px;
+                cursor: pointer;
+
+                &:active {
+                    font-size: 70px;
+                }
+            }
+        }
+
+    }
+}

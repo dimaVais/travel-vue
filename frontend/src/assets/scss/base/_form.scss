@@ -1,0 +1,62 @@
+.form-container {
+    max-width: 80%;
+    height: 1000px;
+    // border: 1px solid gray;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    background-color: $clr2;
+    border-radius: 10px;
+
+    &.shop {
+        height: 880px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid rgb(38, 145, 233);
+        cursor: pointer;
+        font-family: roboto, sans-serif;
+        font-weight: 800;
+        font-size: 1rem;
+        color: rgb(38, 145, 233);
+        border-radius: 5px;
+        margin-top: 5px;
+        min-width: 10em;
+        max-width: 10em;
+    }
+
+}
+
+.fields-container {
+    min-width: 100%;
+    padding: 10px;
+
+    *{
+        margin-top: 0px;
+        width: 20em;
+    }
+    
+   .form-field {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #shop-desc{
+        padding-bottom: 9.5px;
+    }
+
+    .form-inner-box {
+        min-width: 46em;
+        &.prev-ex-box {
+            padding: 0px;
+
+            * {
+               width: 43em;
+            }
+        }
+    }
+
+}

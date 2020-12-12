@@ -1,0 +1,74 @@
+.travel-prev {
+    width: 200px;
+    height: 140px;
+    border-radius: 20px;
+    margin: 5px 0px 5px 0px;
+    cursor: pointer;
+    opacity: 0.9;
+
+    &.Nature {
+        background-color: green;
+    }
+
+    &.Animal {
+        background-color: brown;
+    }
+
+    &.Archiology {
+        background-color: yellow;
+    }
+
+    &.Urban {
+        background-color: gray;
+    }
+
+    &.general {
+        background-color: lightblue;
+    }
+
+    &:hover {
+        opacity: 1;
+        background-color: white;
+        box-shadow: inset 0 0 10px #000000;
+        transition-duration: 0.5s;
+
+        .inner-box {
+            h2 {
+                color: azure;
+                opacity: 0.8;
+                transform: rotate(25deg);
+                margin-top: -85px;
+                // font-size: 30px;
+                transition-duration: 1s;
+            }
+        }
+    }
+
+    .inner-box {
+        width: 180px;
+        height: 120px;
+        background-color: $clr4;
+        border-radius: 20px;
+
+  
+
+        h2 {
+            margin-top: -120px;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 20px;
+            width: 180px;
+            height: 120px;
+        }
+    }
+
+    .bg-name{
+        width:200px;
+        background-color: darkmagenta;
+    }
+
+}
+
+

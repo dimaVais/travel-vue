@@ -1,0 +1,21 @@
+//Basic
+@import '@/assets/scss/base/base';
+@import '@/assets/scss/base/buttons';
+@import '@/assets/scss/base/form';
+@import '@/assets/scss/base/helpers';
+@import '@/assets/scss/base/layout';
+
+//Setup
+@import '@/assets/scss/setup/variables';
+
+
+//Cmps
+@import '@/assets/scss/cmps/mapSection';
+@import '@/assets/scss/cmps/nav';
+@import '@/assets/scss/cmps/googleMap';
+@import '@/assets/scss/cmps/travelList';
+@import '@/assets/scss/cmps/travelPreview';
+@import '@/assets/scss/cmps/travelMain';
+
+//pages
+@import '@/assets/scss/pages/travelDetails';
