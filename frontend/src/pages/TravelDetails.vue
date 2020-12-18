@@ -8,16 +8,15 @@
         <img :src="travel.img" :alt="travel.name" />
       </div>
       <h2>{{ travel.title }}</h2>
-        <h3>Difficulty level: {{ travel.Level }}</h3>
-      <h3>Duration: {{ travel.duration }} Hours</h3>
-      <h3>Recomanded Seasone: {{ travel.seasone }}</h3>
+      <h3><font-awesome-icon :icon="['fas', 'users']" />(Difficulty level) - {{ travel.Level }}</h3>
+      <h3><font-awesome-icon :icon="['fas', 'clock']" />(Duration) - {{ travel.duration }} Hours</h3>
+      <h3><font-awesome-icon :icon="['fas', 'cloud-sun-rain']"/>(Recomanded Seasone) - {{ travel.seasone }}</h3>
        <h3>
-        Location: latitude:{{ travel.location.lat }}, longtitude:{{
-          travel.location.lng
-        }}
+          <font-awesome-icon :icon="['fas', 'map-marked-alt']" /> (Location) -  <h3> latitude:
+              {{ travel.location.lat }}, longtitude: {{ travel.location.lng }}  </h3>
       </h3>
       <pre>{{ travel.description }}</pre>
-      <router-link to="/"> <button>Back</button> </router-link>
+      <router-link to="/"> <button class="back-btn"><img src="@/assets/img/back.svg"/></button> </router-link>
     </div>
 
     <button class="move-btn next" @click="getAnotherTravel('Next')"></button>
@@ -40,12 +39,12 @@ export default {
   },
   methods: {
     getAnotherTravel(direction) {
-        let travelId = 0;
+        let travelId = '';
         if (direction==="Next"){
-            travelId = travelService.getNextId(this.travel.id);
+            travelId = travelService.getNextId(this.travel._id);
             console.log('travelId',travelId);
         } else if (direction==="Prev"){
-            travelId = travelService.getPrevId(this.travel.id);
+            travelId = travelService.getPrevId(this.travel._id);
         }
         this.$router.push(`/details/${travelId}`);
         this.$router.go();

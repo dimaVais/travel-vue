@@ -1,6 +1,6 @@
 .nav-box {
     .nav-main {
-        margin-top: 20px;
+        // margin-top: 20px;
         height: 80px;
 
         .main-header {
@@ -15,11 +15,11 @@
                 background: transparent;
                 outline: none;
                 border-width: 0px;
-                font-size: 60px;
+                font-size: 50px;
                 cursor: pointer;
 
                 &:active {
-                    font-size: 70px;
+                    font-size: 60px;
                 }
             }
         }

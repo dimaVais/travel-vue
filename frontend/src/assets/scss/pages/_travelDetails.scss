@@ -7,7 +7,7 @@
         margin: 10px
     }
 
-    pre{
+    pre {
         text-align: start;
         max-width: 800px;
         white-space: pre-wrap;
@@ -44,6 +44,18 @@
         }
     }
 
+    h3,h2{
+        font-size: 25px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    pre{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+
     .img-box {
         max-width: 840px;
         min-width: 840px;
@@ -69,6 +81,20 @@
             background-color: lightblue;
         }
     }
+
+    .back-btn {
+        background-color: transparent;
+        outline: none;
+        border-width: 0px;
+
+        img {
+            max-width: 50px;
+            min-width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+
 }
 
 .move-btn {
@@ -76,10 +102,10 @@
     top: 300px;
     border: solid rgb(73, 72, 72);
     border-width: 0 10px 10px 0;
-    width:50px;
-    height:50px;
-    background: transparent;    
-    outline:none;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    outline: none;
     cursor: pointer;
 
     &.next {
@@ -94,9 +120,9 @@
         -webkit-transform: rotate(135deg);
     }
 
-    &:hover{
-        width:70px;
-        height:70px;
+    &:hover {
+        width: 70px;
+        height: 70px;
         border: solid rgb(17, 17, 17);
         border-width: 0 15px 15px 0;
     }

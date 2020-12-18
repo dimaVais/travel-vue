@@ -1,24 +1,24 @@
 <template>
   <div>
-    <div class="google-map" ref="googleMap"></div>
-    <template v-if="this.google && this.map">
-      <GoogleMapMarker
-        v-for="marker in markers"
-        :key="marker.id"
-        :marker="marker"
-        :label="marker.lable"
-        :google="google"
-        :map="map"
-      >
-      </GoogleMapMarker>
-      <!-- <gmap-info-window
-        @closeclick="windowOpen"
-        :opened="windowOpen"
-        position="{ lat: 32,lng: 35 }"
-      >
-        Hello world!
-      </gmap-info-window> -->
-    </template>
+    <div class="google-map" ref="googleMap">
+      <slot v-if="this.google && this.map" @click="setMainTravel">
+        <GoogleMapMarker
+          v-for="marker in markers"
+          :key="marker.id"
+          :marker="marker"
+          :label="marker.lable"
+          :google="google"
+          :map="map"
+        >
+        </GoogleMapMarker>
+         <!-- <gmap-info-window
+        :options="infoOptions"
+        :position="infoWindowPos"
+        :opened="infoWinOpen"
+        @closeclick="infoWinOpen=false"
+      > -->
+      </slot>
+    </div>
   </div>
 </template>
 
@@ -31,6 +31,7 @@ export default {
   props: {
     mapConfig: Object,
     apiKey: String,
+    travels: Array,
   },
   components: {
     GoogleMapMarker,
@@ -41,16 +42,20 @@ export default {
       map: null,
       // infowindow: null,
       // windowOpen: false,
-      markers: [
-        { id: "a", position: { lat: 32, lng: 34 }, lable: "ddd" },
-        { id: "b", position: { lat: 32, lng: 35 }, lable: "aaa" },
-        { id: "c", position: { lat: 32, lng: 36 }, lable: "bbb" },
-      ],
+      markers: [],
     };
   },
-  comouted: {
-  },
+  comouted: {},
   async mounted() {
+    this.markers = this.travels.map((travel) => {
+      return {
+        id: travel._id.toString(),
+        position: { lat: travel.location.lat, lng: travel.location.lng },
+        name: travel.name,
+        img: travel.img,
+        type: travel.type
+      };
+    });
     const googleMapApi = await GoogleMapsApiLoader({
       apiKey: this.apiKey,
     });
@@ -61,7 +66,11 @@ export default {
     initializeMap() {
       const mapContainer = this.$refs.googleMap;
       this.map = new this.google.maps.Map(mapContainer, this.mapConfig);
-    }
+    },
+    setMainTravel(showTravel) {
+      console.log("mouseMoved", showTravel);
+      this.$emit("setMainTravel", showTravel);
+    },
   },
 };
 </script>
