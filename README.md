@@ -6,4 +6,4 @@ Link to the application on Heroku -
 https://travelvue.herokuapp.com/#/
 
 Screenshots - 
-![Main Page](/Main Page.png?raw=true?raw=true "Main Page")
+![Home Page](/HomePage.png?raw=true?raw=true "Home Page")
