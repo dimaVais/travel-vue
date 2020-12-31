@@ -14,5 +14,6 @@ Home Page Selected travel  -
 ![Home Page Selected](/HomeSelected.jpg?raw=true?raw=true "Home Page Selected")
 
 Details Page  -
+
 ![Details Page](/DetailsPage.jpg?raw=true?raw=true "Details Page")
 
