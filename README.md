@@ -5,5 +5,5 @@ The frontend is written with Vue and the backend with Node.js. It uses mongoDb o
 Link to the application on Heroku - 
 https://travelvue.herokuapp.com/#/
 
-Main Page at the start - 
-https://github.com/dimaVais/travel-vue/blob/master/Main%20Page.png
+Screenshots - 
+![Main Page](/Main Page.jpg?raw=true?raw=true "Home Page")
