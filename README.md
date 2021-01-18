@@ -8,7 +8,6 @@ https://travelvue.herokuapp.com/#/
 Screenshots - 
 
 Home Page Initial  -
-![Home Page](/HomePage.png?raw=true?raw=true "Home Page")
 
 Home Page Selected travel  -
 ![Home Page Selected](/HomeSelected.jpg?raw=true?raw=true "Home Page Selected")
