@@ -12,9 +12,9 @@ Home Page Initial  -
 
 
 Home Page Selected travel  -
-![Home Page Selected](/HomeSelected.jpg?raw=true?raw=true "Home Page Selected")
+![Details Page](/DetailsPage.jpg?raw=true?raw=true "Details Page")
 
 Details Page  -
+![Home Page Selected](/HomeSelected.jpg?raw=true?raw=true "Home Page Selected")
 
-![Details Page](/DetailsPage.jpg?raw=true?raw=true "Details Page")
 
